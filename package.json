@@ -10,5 +10,11 @@
   "engines": {
     "npm": ">=7",
     "node": ">=14"
+  },
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0"
   }
 }
