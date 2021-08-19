@@ -12,6 +12,7 @@
     "node": ">=14"
   },
   "scripts": {
+    "test": "jest",
     "lint": "eslint ."
   },
   "dependencies": {
@@ -21,6 +22,13 @@
     "lodash.last": "^3.0.0"
   },
   "devDependencies": {
-    "eslint": "^7.32.0"
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@vue/test-utils": "^1.2.2",
+    "@vuelidate/core": "^2.0.0-alpha.24",
+    "babel-jest": "^27.0.6",
+    "eslint": "^7.32.0",
+    "jest": "^27.0.6",
+    "vue": "^2.6.14"
   }
 }
