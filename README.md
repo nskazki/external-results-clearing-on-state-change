@@ -139,4 +139,8 @@ the field dirty which wasn't working for me because I tried to achieve the "Rewa
 I created an issue requesting an option making Vuelidate observe the store itself instead of waiting for the `$model` to get set
 (https://github.com/vuelidate/vuelidate/issues/921) but the author pointed out that he considers adding true support for the desired
 UX pattern (https://github.com/vuelidate/vuelidate/issues/897) which, as I think, would make the requested option obsolete.
-So, I figured why not publishing my solution while I'm waiting for decisions to be made.
+So, I figured why not publishing a solution for my problem while I'm waiting for the decision to be made.
+
+Also, here's the demo showcasing the poor man's "Reward early, punish late" under the Hybrid heading:
+
+https://user-images.githubusercontent.com/6743076/129810797-75e8d15f-0624-4075-801f-2c7b432b905c.mp4
