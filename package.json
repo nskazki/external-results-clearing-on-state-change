@@ -6,13 +6,15 @@
   "repository": "https://github.com/nskazki/external-results-clearing-on-state-change",
   "keywords": ["vuelidate", "external results"],
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "test": "jest",
     "lint": "eslint ."
   },
+  "peerDependencies": {
+    "@vue/composition-api": "^1.1.1"
+  },
   "dependencies": {
-    "@vue/composition-api": "^1.1.1",
     "lodash.isnil": "^4.0.0",
     "lodash.isobjectlike": "^4.0.0",
     "lodash.last": "^3.0.0"
