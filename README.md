@@ -1,5 +1,6 @@
 # external-results-clearing-on-state-change
 
+An alternative way to clear Vuelidate's `$externalResults` on state change, the way that doesn't involve `$model`.
 The package isn't published. https://github.com/vueuse/vue-demi is to be used for Vue@3 support. The Composition API for Vue@2 is powered by https://github.com/vuejs/composition-api.
 
 ```
@@ -138,8 +139,7 @@ the field dirty which wasn't working for me because I tried to achieve the "Rewa
 
 I created an issue requesting an option making Vuelidate observe the store itself instead of waiting for the `$model` to get set
 (https://github.com/vuelidate/vuelidate/issues/921) but the author pointed out that he considers adding true support for the desired
-UX pattern (https://github.com/vuelidate/vuelidate/issues/897) which, as I think, would make the requested option obsolete.
-So, I figured why not publishing a solution for my problem while I'm waiting for the decision to be made.
+UX pattern (https://github.com/vuelidate/vuelidate/issues/897), so I figured why not publishing a solution for my problem while the decision's being made.
 
 Also, here's the demo showcasing the poor man's "Reward early, punish late" under the Hybrid heading:
 

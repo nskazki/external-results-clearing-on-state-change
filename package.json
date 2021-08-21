@@ -2,7 +2,7 @@
   "name": "external-results-clearing-on-state-change",
   "main": "src/index.js",
   "author": "nskazki",
-  "description": "$externalResults for Vuelidate auto-clearing its leaves when the coresponding models in the state change",
+  "description": "An alternative way to clear Vuelidate's $externalResults on state change, the way that doesn't involve $model",
   "repository": "https://github.com/nskazki/external-results-clearing-on-state-change",
   "keywords": ["vuelidate", "external results"],
   "license": "MIT",
