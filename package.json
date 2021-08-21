@@ -7,9 +7,6 @@
   "keywords": ["vuelidate", "external results"],
   "license": "MIT",
   "version": "0.0.1",
-  "engines": {
-    "node": ">=14"
-  },
   "scripts": {
     "test": "jest",
     "lint": "eslint ."
