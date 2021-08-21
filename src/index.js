@@ -1,8 +1,9 @@
-// https://github.com/vuelidate/vuelidate/issues/921 - Vuelidate has got a new feature clearing
-// external results when the state gets updated indirectly via $model or when the state gets
-// updated directly but the autoDirty option is set and it's a great feature but I can't use it.
-// It's so because I have an idea of how to validate inputs which requires manual fiddling with
-// $touch and $reset and so I can't use $model which calls $touch whenever it  gets set.
+// https://github.com/vuelidate/vuelidate/issues/921 - Vuelidate has great support for server errors,
+// you can set them per field, you can clear them manually and you can even expect Vuelidate to clear
+// them automatically whenever you update your fields via Vuelidate's v$.myField.$model setter.
+// The only problem is that `v$.myField.$model = 'new'` would also mark the field dirty which
+// wasn't working for me because I was fiddling with $touch and $reset manually, trying to
+// implement the "Reward early, punish late" kind of UX.
 //
 // This helper makes it possible to automatically clear external results without involving $model.
 // For that purpose, it creates an object in which to put server errors and let you pass it to
@@ -145,7 +146,7 @@ export default function useExternalResultsClearingOnStateChange(state) {
 
 function populateExternalResults(source, externalResults, resets = false) {
   // With this Vuelidate won't lose vuelidateExternalResults when the Options API is used
-  // because intead of replacing the ref we updating the reactive object that is stored in it.
+  // because intead of replacing the ref, we're updating the reactive object that is stored in it.
   // Vuelidate would lose vuelidateExternalResults because it extract the value from $vm intead of creating a ref
   // https://github.com/vuelidate/vuelidate/blob/64892a5ebcdee1ad8c728766d9e693f605e36477/packages/vuelidate/src/index.js#L153
 
