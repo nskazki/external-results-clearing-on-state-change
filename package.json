@@ -1,7 +1,7 @@
 {
   "name": "external-results-clearing-on-state-change",
   "main": "src/index.js",
-  "author": "nskazki",
+  "author": "Nikita Skazki <nskazki@gmail.com>",
   "description": "An alternative way to clear Vuelidate's $externalResults on state change, the way that doesn't involve $model",
   "repository": "https://github.com/nskazki/external-results-clearing-on-state-change",
   "keywords": ["vuelidate", "external results"],
