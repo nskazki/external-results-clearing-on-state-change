@@ -4,9 +4,12 @@
   "author": "Nikita Skazki <nskazki@gmail.com>",
   "description": "An alternative way to clear Vuelidate's $externalResults on state change, the way that doesn't involve $model",
   "repository": "https://github.com/nskazki/external-results-clearing-on-state-change",
-  "keywords": ["vuelidate", "external results"],
+  "keywords": [
+    "vuelidate",
+    "external results"
+  ],
   "license": "MIT",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "test": "jest",
     "lint": "eslint ."
