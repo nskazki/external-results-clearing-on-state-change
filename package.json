@@ -18,6 +18,11 @@
   "peerDependencies": {
     "@vue/composition-api": "^1.7.0"
   },
+  "peerDependenciesMeta": {
+    "@vue/composition-api": {
+      "optional": true
+    }
+  },
   "dependencies": {
     "lodash.isnil": "^4.0.0",
     "lodash.isobjectlike": "^4.0.0",
