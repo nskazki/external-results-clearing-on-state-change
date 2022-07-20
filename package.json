@@ -4,7 +4,10 @@
   "author": "Nikita Skazki <nskazki@gmail.com>",
   "description": "An alternative way to clear Vuelidate's $externalResults on state change, the way that doesn't involve $model",
   "repository": "https://github.com/nskazki/external-results-clearing-on-state-change",
-  "keywords": ["vuelidate", "external results"],
+  "keywords": [
+    "vuelidate",
+    "external results"
+  ],
   "license": "MIT",
   "version": "0.0.2",
   "scripts": {
@@ -20,8 +23,8 @@
     "lodash.last": "^3.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.0",
-    "@babel/preset-env": "^7.15.0",
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
     "@vue/test-utils": "^1.2.2",
     "@vuelidate/core": "^2.0.0-alpha.24",
     "babel-jest": "^27.0.6",
