@@ -20,19 +20,19 @@
   "dependencies": {
     "lodash.isnil": "^4.0.0",
     "lodash.isobjectlike": "^4.0.0",
-    "lodash.last": "^3.0.0"
+    "lodash.last": "^3.0.0",
+    "vue-demi": "^0.13.5"
   },
   "devDependencies": {
     "@babel/core": "^7.18.9",
     "@babel/preset-env": "^7.18.9",
     "@vue/composition-api": "^1.7.0",
-    "@vue/test-utils": "^1.3.0",
+    "@vue/test-utils": "^2.0.2",
     "@vuelidate/core": "^2.0.0-alpha.42",
     "babel-jest": "^28.1.3",
     "eslint": "^8.20.0",
     "jest": "^28.1.3",
     "jest-environment-jsdom": "^28.1.3",
-    "vue": "~2.6.14",
-    "vue-template-compiler": "~2.6.14"
+    "vue": "^3.2.37"
   }
 }

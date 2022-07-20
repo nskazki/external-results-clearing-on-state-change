@@ -1,8 +1,5 @@
-import Vue from 'vue'
-import VueCompositionAPI, { ref, watch, nextTick, reactive } from '@vue/composition-api'
+import { ref, watch, nextTick, reactive } from 'vue-demi'
 import { reactiveSetDeep } from '../src/reactivityHelpers'
-
-Vue.use(VueCompositionAPI)
 
 it('rejects an source of unexpected type', () => {
   expect(() => reactiveSetDeep(null, [], null)).toThrow('source should be reactive')
