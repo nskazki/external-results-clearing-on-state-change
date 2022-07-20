@@ -2,5 +2,8 @@
 
 module.exports = {
   clearMocks: true,
-  testEnvironment: 'jsdom'
+  testEnvironment: 'jsdom',
+  testEnvironmentOptions: {
+    customExportConditions: ['node']
+  }
 }

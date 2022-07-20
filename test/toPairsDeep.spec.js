@@ -1,8 +1,5 @@
-import Vue from 'vue'
-import VueCompositionAPI, { ref, unref } from '@vue/composition-api'
+import { ref, unref } from 'vue-demi'
 import { toPairsDeep } from '../src/objectHelpers'
-
-Vue.use(VueCompositionAPI)
 
 it('does not mind values different from objects', () => {
   expect(toPairsDeep()).toEqual([])

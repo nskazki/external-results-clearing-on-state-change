@@ -1,8 +1,5 @@
-import Vue from 'vue'
-import VueCompositionAPI, { ref, unref } from '@vue/composition-api'
+import { ref, unref } from 'vue-demi'
 import { getDeep } from '../src/objectHelpers'
-
-Vue.use(VueCompositionAPI)
 
 it('throws an error when the path is of an unexpected type', () => {
   expect(() => getDeep([], '1')).toThrow('path is expected to be an array')
