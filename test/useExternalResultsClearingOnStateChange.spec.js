@@ -1,4 +1,4 @@
-import { mount } from '@vue/test-utils'
+import { mount } from '../demi/testUtils'
 
 import useVuelidate from '@vuelidate/core'
 import { ref, isRef, reactive, nextTick } from 'vue-demi'
