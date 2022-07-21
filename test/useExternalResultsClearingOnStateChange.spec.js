@@ -1,11 +1,8 @@
-import { mount } from '@vue/test-utils'
+import { mount } from '../demi/testUtils'
 
-import Vue from 'vue'
 import useVuelidate from '@vuelidate/core'
-import VueCompositionAPI, { ref, isRef, reactive } from '@vue/composition-api'
+import { ref, isRef, reactive, nextTick } from 'vue-demi'
 import useExternalResultsClearingOnStateChange, { validationDummy } from '../src'
-
-Vue.use(VueCompositionAPI)
 
 function MyFieldComponent() {
   return mount({
@@ -44,7 +41,7 @@ describe('the service itself', () => {
     const state = reactive({ myField: null })
     const externals = useExternalResultsClearingOnStateChange(state)
     externals.value = { myField: ['oops'] }
-    await Vue.nextTick()
+    await nextTick()
     expect(externals.value).toEqual({ myField: ['oops'] })
   })
 
@@ -53,7 +50,7 @@ describe('the service itself', () => {
     const externals = useExternalResultsClearingOnStateChange(state)
     externals.value = { myField: ['oops'] }
     state.myField = 1
-    await Vue.nextTick()
+    await nextTick()
     expect(externals.value).toEqual({ myField: null })
   })
 
@@ -62,7 +59,7 @@ describe('the service itself', () => {
     const externals = useExternalResultsClearingOnStateChange(state)
     externals.value = { myForm: { myField: ['oops'] } }
     state.myForm.myField = 1
-    await Vue.nextTick()
+    await nextTick()
     expect(externals.value).toEqual({ myForm: { myField: null } })
   })
 
@@ -71,7 +68,7 @@ describe('the service itself', () => {
     const externals = useExternalResultsClearingOnStateChange(state)
     externals.value = { myField: ['oops'] }
     state.value = { myField: 1 }
-    await Vue.nextTick()
+    await nextTick()
     expect(externals.value).toEqual({ myField: null })
   })
 
@@ -80,7 +77,7 @@ describe('the service itself', () => {
     const externals = useExternalResultsClearingOnStateChange(state)
     externals.value = { myForm: { myField: ['oops'] } }
     state.value = { myForm: { myField: 1 } }
-    await Vue.nextTick()
+    await nextTick()
     expect(externals.value).toEqual({ myForm: { myField: null } })
   })
 
@@ -89,7 +86,7 @@ describe('the service itself', () => {
     const externals = useExternalResultsClearingOnStateChange(state)
     externals.value = { myField: ['oops'] }
     state.myField.value = 1
-    await Vue.nextTick()
+    await nextTick()
     expect(externals.value).toEqual({ myField: null })
   })
 
@@ -98,7 +95,7 @@ describe('the service itself', () => {
     const externals = useExternalResultsClearingOnStateChange(state)
     externals.value = { myForm: { myField: ['oops'] } }
     state.myForm.myField.value = 1
-    await Vue.nextTick()
+    await nextTick()
     expect(externals.value).toEqual({ myForm: { myField: null } })
   })
 })
@@ -146,7 +143,7 @@ describe('the service integrating with Vuelidate', () => {
 
     $externalResults.value = { myField: ['oops'] }
     myField.value = 123
-    await Vue.nextTick()
+    await nextTick()
     expect(v$.value.$invalid).toBe(false)
   })
 

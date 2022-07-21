@@ -2,7 +2,7 @@ import last from 'lodash.last'
 import isObjectLike from 'lodash.isobjectlike'
 
 import { getDeep } from './objectHelpers'
-import { set as reactiveSet, unref, computed, isReactive } from '@vue/composition-api'
+import { set as reactiveSet, unref, computed, isReactive } from 'vue-demi'
 
 // based on toRef from https://github.com/vuejs/composition-api/blob/v1.1.1/src/reactivity/ref.ts#L131
 //

@@ -1,8 +1,5 @@
-import Vue from 'vue'
-import VueCompositionAPI, { ref, reactive } from '@vue/composition-api'
+import { ref, reactive } from 'vue-demi'
 import { toReadonlyRefDeep } from '../src/reactivityHelpers'
-
-Vue.use(VueCompositionAPI)
 
 it('rejects an source of unexpected type', () => {
   expect(() => toReadonlyRefDeep(null, [])).toThrow('source should be an object or an array')

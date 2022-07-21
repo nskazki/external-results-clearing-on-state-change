@@ -1,8 +1,6 @@
-import Vue from 'vue'
-import VueCompositionAPI, { ref, watch, nextTick, reactive } from '@vue/composition-api'
+import { ref, watch, nextTick, reactive } from 'vue-demi'
 import { reactiveSetDeep } from '../src/reactivityHelpers'
-
-Vue.use(VueCompositionAPI)
+import { ifVue3 } from '../demi/testUtils'
 
 it('rejects an source of unexpected type', () => {
   expect(() => reactiveSetDeep(null, [], null)).toThrow('source should be reactive')
@@ -20,7 +18,7 @@ it('adds a field to an object', () => {
   expect(source.a).toBe(1)
 })
 
-it('adds an element to an array', () => {
+ifVue3('adds an element to an array', () => {
   const source = reactive([])
   reactiveSetDeep(source, [0], 1)
   expect(source[0]).toBe(1)
@@ -32,7 +30,7 @@ it('updates a field in an object', () => {
   expect(source.a).toBe(2)
 })
 
-it('updates an element in an array', () => {
+ifVue3('updates an element in an array', () => {
   const source = reactive([1])
   reactiveSetDeep(source, [0], 2)
   expect(source[0]).toBe(2)
@@ -50,13 +48,13 @@ it('fills in a missing array in an object', () => {
   expect(source.a[0]).toBe(1)
 })
 
-it('fills in a missing object in an array', () => {
+ifVue3('fills in a missing object in an array', () => {
   const source = reactive([])
   reactiveSetDeep(source, [0, 'a'], 1)
   expect(source[0].a).toBe(1)
 })
 
-it('fills in a missing array in another array', () => {
+ifVue3('fills in a missing array in another array', () => {
   const source = reactive([])
   reactiveSetDeep(source, [0, 0], 1)
   expect(source[0][0]).toBe(1)
