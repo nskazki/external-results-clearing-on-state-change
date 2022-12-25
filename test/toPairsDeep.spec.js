@@ -1,4 +1,4 @@
-import { ref, unref } from 'vue-demi'
+import { ref, unref } from 'vue'
 import { toPairsDeep } from '../src/objectHelpers'
 
 it('does not mind values different from objects', () => {

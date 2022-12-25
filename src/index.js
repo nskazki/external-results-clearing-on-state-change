@@ -92,7 +92,7 @@ import isObjectLike from 'lodash.isobjectlike'
 import { hasDeep, toPathsDeep, toPairsDeep } from './objectHelpers'
 import { reactiveSetDeep, toReadonlyRefDeep } from './reactivityHelpers'
 
-import { unref, watch, reactive, customRef, onBeforeMount, getCurrentInstance } from 'vue-demi'
+import { unref, watch, reactive, customRef, onBeforeMount, getCurrentInstance } from 'vue'
 
 export function validationDummy() {
   // To be used when server-side errors are to be shown for a field without any client-side validations

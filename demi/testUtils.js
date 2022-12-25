@@ -1,6 +1,8 @@
 // taken from https://github.com/vuelidate/vuelidate/blob/5013d34de1/packages/vuelidate/test/unit/test-utils.js
 
-const { isVue2, isVue3 } = require('vue-demi')
+const { version } = require('vue')
+
+const isVue3 = /^3\./.test(version)
 
 module.exports = isVue3
   ? require('@vue/test-utils')

@@ -12,17 +12,13 @@
   "version": "0.0.3",
   "scripts": {
     "lint": "eslint .",
-    "test:2": "node demi/swapScript 2 && vue-demi-switch 2.7 && jest",
-    "test:3": "node demi/swapScript 3 && vue-demi-switch 3 && jest"
-  },
-  "peerDependencies": {
-    "@vue/composition-api": "^1.7.0"
+    "test:2": "node demi/swapScript 2 && jest",
+    "test:3": "node demi/swapScript 3 && jest"
   },
   "dependencies": {
     "lodash.isnil": "^4.0.0",
     "lodash.isobjectlike": "^4.0.0",
-    "lodash.last": "^3.0.0",
-    "vue-demi": "^0.13.11"
+    "lodash.last": "^3.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.7",
@@ -38,8 +34,5 @@
     "vue": "^3.2.45",
     "vue-template-compiler": "~2.7.14",
     "vue2": "npm:vue@~2.7.14"
-  },
-  "resolutions": {
-    "@vuelidate/core/**/vue-demi": "^0.13.11"
   }
 }

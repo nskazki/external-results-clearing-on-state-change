@@ -1,4 +1,4 @@
-import { ref, reactive } from 'vue-demi'
+import { ref, reactive } from 'vue'
 import { toReadonlyRefDeep } from '../src/reactivityHelpers'
 
 it('rejects an source of unexpected type', () => {
