@@ -1,7 +1,7 @@
 # external-results-clearing-on-state-change
 
 An alternative way to clear Vuelidate's `$externalResults` on state change, the way that doesn't involve `$model`.
-The package isn't published. https://github.com/vueuse/vue-demi is to be used for Vue@3 support. The Composition API for Vue@2 is powered by https://github.com/vuejs/composition-api.
+The package isn't published. Vue ^2.7.0 || ^3.0.0 is supported.
 
 ```
 npm --save git+https://github.com/nskazki/external-results-clearing-on-state-change#v0.0.2
