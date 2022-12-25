@@ -51,7 +51,7 @@
 //     }
 //   }
 //
-// To use this helper in a common utilizing the Composition API, read the docs and follow this snippet:
+// To use this helper in a component utilizing the Composition API, read the docs and follow this snippet:
 //
 //   1. https://v3.vuejs.org/guide/composition-api-introduction.html
 //   2. https://github.com/vuejs/composition-api
@@ -164,7 +164,7 @@ function populateExternalResults(source, externalResults, resets = false) {
 }
 
 function clearExternalResultsOnStateChange(state, externalResults) {
-  // I can't watch over externalResults and and subscribe on models when
+  // I can't watch over externalResults and subscribe on models when
   // it changes because creating watchers inside other watchers isn't allowed.
   //
   // I can't rely on validation rules to filter out leaves because the way Vuelidate
