@@ -9,7 +9,7 @@
     "external results"
   ],
   "license": "MIT",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "scripts": {
     "lint": "eslint .",
     "test:2": "node demi/swapScript 2 && jest",
