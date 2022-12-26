@@ -1,4 +1,4 @@
-import { ref, unref } from 'vue-demi'
+import { ref, unref } from 'vue'
 import { getDeep } from '../src/objectHelpers'
 
 it('throws an error when the path is of an unexpected type', () => {

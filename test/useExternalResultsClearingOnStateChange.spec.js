@@ -1,7 +1,7 @@
 import { mount } from '../demi/testUtils'
 
 import useVuelidate from '@vuelidate/core'
-import { ref, isRef, reactive, nextTick } from 'vue-demi'
+import { ref, isRef, reactive, nextTick } from 'vue'
 import useExternalResultsClearingOnStateChange, { validationDummy } from '../src'
 
 function MyFieldComponent() {

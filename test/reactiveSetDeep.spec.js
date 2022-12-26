@@ -1,4 +1,4 @@
-import { ref, watch, nextTick, reactive } from 'vue-demi'
+import { ref, watch, nextTick, reactive } from 'vue'
 import { reactiveSetDeep } from '../src/reactivityHelpers'
 import { ifVue3 } from '../demi/testUtils'
 
